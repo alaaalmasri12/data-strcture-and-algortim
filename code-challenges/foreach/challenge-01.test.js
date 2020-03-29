@@ -61,9 +61,7 @@ This function should use forEach again, but rather than taking in a callback as 
 This anonymous function should accept up to three arguments: the element, the index, and the array.
 ------------------------------------------------------------------------------------------------ */
 const removeWithAnon = arr => {
-  // Solution code here...
-  //we dont do callback we do foreach (ele,index,array) using 3 inputs 
-};
+}
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 Write a function named createList that takes in an array of the current store intentory.
@@ -78,7 +76,7 @@ The inventory is formatted like this:
 This function should use forEach to populate your grocery list based on the store's inventory. If the item is available, add it to your list. Return the final list.
 ------------------------------------------------------------------------------------------------ */
 const createList = availableItems => {
-  var items=[];
+  let items=[];
   availableItems.forEach((item)=>{
     if(item.available)
     {
@@ -114,9 +112,9 @@ const fizzbuzz = arr => {
       arr2.push(value);
     }
   });
-   return arr2;
-};
+  return arr2;
 
+};
 /* ------------------------------------------------------------------------------------------------
 TESTS
 All the code below will verify that your functions are working to solve the challenges.
