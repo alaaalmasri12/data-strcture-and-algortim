@@ -122,8 +122,21 @@ Write a function named totalCharacters that takes in an array and returns the nu
 ------------------------------------------------------------------------------------------------ */
 
 const totalCharacters = (arr) => {
-  // Solution code here...
-};
+
+    var counter=0;
+    arr.forEach(val=>{
+      Object.values(val).forEach(elem=>{
+        if(elem !== null)
+        {
+        counter++;
+        }
+
+           });
+        
+    });
+    console.log(counter);
+    return counter++;
+  } ;
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 - Stretch Goal
