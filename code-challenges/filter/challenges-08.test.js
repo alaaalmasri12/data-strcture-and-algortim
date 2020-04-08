@@ -7,21 +7,16 @@ Note: You may not use the array's built-in length property.
 ------------------------------------------------------------------------------------------------ */
 
 const countNumberOfElements = (arr) => {
-  // Solution code here...
 
-  // return arr.length;                                       // 1st way , forbidden 
-
-  let arrLen = arr.reduce((acc, cur, idx) =>                   // 2nd way 
+  let arrLen = arr.reduce((acc, cur, idx) =>                   
   {
-    // console.log('idx : ', idx);
     acc = acc + idx;
-    // console.log('acc : ', acc);
     return acc - 1;
 
   }, 0);
   return arrLen;
 };
-
+//
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 Write a function named returnNames that, given the Star Wars data, below, uses reduce to return an array containing the names of the characters.
@@ -79,11 +74,8 @@ let starWarsData = [{
 }];
 
 const returnNames = (arr) => {
-  //   // Solution code here...
   const names = arr.reduce((acc, val, idx) => {
-    // console.log('val : ', val);
     acc.push(val.name);
-    // console.log('acc : ', acc);
     return acc;
   }, []);
   return names;
@@ -98,15 +90,11 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 const reversedString = (str) => {
   // Solution code here...
 
-  // 103 edoC
   let splitstr = str.split('');
   let reversed = splitstr.reduce( (newstring,curLetter) =>
   {
-    // console.log('newstring : ', newstring);
-    // console.log('curLetter : ', curLetter);
     return curLetter + newstring;
   },'');
-  // console.log('reversed : ', reversed);
   return reversed;
 };
 
@@ -162,14 +150,12 @@ const countNumberOfChildren = (arr) => {
   // Solution code here...
   const numOfChild = arr.reduce((acc, num, idx) => {
     if (num.children) {
-      // console.log('acc : ', acc);
       return acc + num.children.length;
     }
     else {
       return acc;
     }
   }, 0);
-  // console.log('numOfChild : ', numOfChild);
   return numOfChild;
 };
 
@@ -186,14 +172,10 @@ const calculateAverage = (arr) => {
   let avgNum = arr.reduce ( (acc,val) =>
   {
     count++;
-    // console.log('count : ', count);
     acc = acc + val;
-    // console.log('acc : ', acc);
     return acc;
   } , 0);
-  // console.log('avgNum : ', avgNum);
   let averge = avgNum/count;
-  // console.log('averge : ', averge);
   return averge;
 };
 
